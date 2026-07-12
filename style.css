@@ -747,17 +747,9 @@ RESULTADOS — CORREÇÃO DE ALTURA E ESPAÇAMENTO
     var(--bg);
 }
 .planos h2 {
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 }
-.planos-sub {
-  max-width: 680px;
-  margin: 0 auto 64px;
-  padding: 0 20px;
-  text-align: center;
-  color: var(--text-soft);
-  font-size: 17px;
-  line-height: 1.8;
-}
+
 .planos-grid {
   width: min(var(--container), 92%);
   margin: 0 auto;
@@ -765,6 +757,7 @@ RESULTADOS — CORREÇÃO DE ALTURA E ESPAÇAMENTO
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
+
 .plano {
   position: relative;
   display: flex;
