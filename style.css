@@ -60,6 +60,11 @@ button {
   --container: 1200px;
 }
 
+.sobre-mim {
+  color: #8f6b37;
+  font-weight: 900;
+}
+
 body::selection {
   background: var(--gold);
   color: #111;
