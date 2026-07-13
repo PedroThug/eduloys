@@ -442,7 +442,7 @@ RESPONSIVO HERO
   }
 
   .hero-text {
-    padding-top: 55px;
+    text-align: center;
   }
 
   .hero-text h1 {
@@ -462,6 +462,18 @@ RESPONSIVO HERO
 
     font-size: 16px;
     line-height: 1.7;
+  }
+
+  .hero-text .btn {
+    display: flex;
+
+    width: 100%;
+    max-width: 340px;
+
+    margin: 0 auto;
+
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-image {
@@ -1930,8 +1942,10 @@ FOOTER
   }
 
   .sobre-text p {
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
+    line-height: 1.9;
+    letter-spacing: 0.2px;
+    word-spacing: normal;
   }
 
   .sobre-text h2,
