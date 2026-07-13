@@ -1597,6 +1597,9 @@ CONTATO FLUTUANTE
   flex-direction: column;
   align-items: flex-end;
   gap: 14px;
+
+  /* o container não bloqueia cliques na página */
+  pointer-events: none;
 }
 
 /* BOTÃO PRINCIPAL */
@@ -1629,6 +1632,12 @@ CONTATO FLUTUANTE
     box-shadow 0.3s ease;
 
   animation: contactPulse 2.8s infinite;
+
+  /* só o botão recebe clique */
+  pointer-events: auto;
+
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .contact-trigger i {
@@ -1637,6 +1646,7 @@ CONTATO FLUTUANTE
 
 .contact-trigger:hover {
   transform: translateY(-4px);
+
   box-shadow:
     0 22px 55px rgba(0, 0, 0, 0.4),
     0 0 32px rgba(37, 211, 102, 0.35);
@@ -1910,6 +1920,24 @@ FOOTER
     padding-top: 80px;
     padding-bottom: 80px;
   }
+
+  .sobre {
+    text-align: left;
+  }
+
+  .sobre-text {
+    text-align: justify;
+  }
+
+  .sobre-text p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .sobre-text h2,
+  .sobre .tag {
+    text-align: center;
+  }
   .accordion button {
     min-height: 68px;
     padding: 0 20px;
@@ -1979,4 +2007,92 @@ FOOTER
 ::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background: linear-gradient(var(--gold), var(--gold-dark));
+}
+
+/* =====================================================
+   CORREÇÃO DE CLIQUES E TOQUES NO MOBILE
+===================================================== */
+
+/* Remove o atraso artificial de toque */
+a,
+button,
+.btn,
+.btn-plano,
+.carousel-btn,
+.contact-trigger,
+.contact-option,
+.accordion button,
+.faq-item button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Elementos puramente visuais não podem bloquear cliques */
+.hero-overlay,
+.hero-image::before,
+.gold-shape,
+.green-shape,
+.processo-card::after,
+.sobre-img::before,
+.cta::before,
+.destaque::before {
+  pointer-events: none;
+}
+
+/* O container do botão flutuante não bloqueia a página */
+.contact-widget {
+  pointer-events: none;
+}
+
+/* Apenas os elementos realmente clicáveis recebem o toque */
+.contact-trigger,
+.contact-widget.active .contact-menu,
+.contact-menu a {
+  pointer-events: auto;
+}
+
+/* Menu fechado não pode capturar cliques invisivelmente */
+.contact-menu {
+  pointer-events: none;
+}
+
+.contact-widget.active .contact-menu {
+  pointer-events: auto;
+}
+
+/* Garante que botões e links fiquem acima das decorações */
+.btn,
+.btn-plano,
+.carousel-btn,
+.accordion button,
+.faq-item button {
+  position: relative;
+  z-index: 2;
+}
+
+/* No celular, evita o primeiro toque servir apenas como hover */
+@media (hover: none) and (pointer: coarse) {
+  .btn:hover,
+  .btn-plano:hover,
+  .plano:hover,
+  .accordion:hover,
+  .faq-item:hover,
+  .processo-card:hover,
+  .contact-option:hover,
+  .carousel-btn:hover {
+    transform: none;
+  }
+
+  .accordion:hover,
+  .faq-item:hover,
+  .plano:hover,
+  .processo-card:hover {
+    box-shadow: none;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .contact-trigger:hover {
+    transform: none;
+  }
 }
