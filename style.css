@@ -391,7 +391,17 @@ RESPONSIVO HERO
   }
 
   .floating-card {
-    display: none;
+    display: block;
+  }
+
+  .card-one {
+    top: 18%;
+    right: 8px;
+  }
+
+  .card-two {
+    left: 8px;
+    bottom: 10%;
   }
 }
 
@@ -455,9 +465,39 @@ RESPONSIVO HERO
   }
 
   .hero-image {
-    min-height: 420px;
+    position: relative;
+  }
 
-    margin-top: 25px;
+  .floating-card {
+    display: block;
+
+    padding: 11px 14px;
+
+    border-radius: 13px;
+
+    background: rgba(20, 20, 20, 0.88);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.38);
+  }
+
+  .floating-card strong {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+
+  .floating-card span {
+    font-size: 10px;
+  }
+
+  .card-one {
+    top: 17%;
+    right: 2px;
+  }
+
+  .card-two {
+    left: 2px;
+    bottom: 8%;
   }
 
   .hero-image img {
@@ -490,6 +530,28 @@ RESPONSIVO HERO
 
   .hero-image img {
     max-height: 430px;
+  }
+
+  .floating-card {
+    padding: 9px 11px;
+  }
+
+  .floating-card strong {
+    font-size: 16px;
+  }
+
+  .floating-card span {
+    font-size: 9px;
+  }
+
+  .card-one {
+    top: 19%;
+    right: 0;
+  }
+
+  .card-two {
+    left: 0;
+    bottom: 7%;
   }
 }
 
@@ -1035,6 +1097,22 @@ RESULTADOS — CORREÇÃO DE ALTURA E ESPAÇAMENTO
   white-space: nowrap;
 }
 
+.planos {
+  padding: 100px 20px 120px;
+
+  background:
+    radial-gradient(circle at top, rgba(200, 169, 106, 0.08), transparent 40%),
+    var(--background);
+}
+
+.planos h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 60px;
+}
+
 .planos-grid {
   width: min(980px, 92%);
   margin: 0 auto;
@@ -1366,20 +1444,104 @@ RESULTADOS — CORREÇÃO DE ALTURA E ESPAÇAMENTO
 
 @media (max-width: 600px) {
   .faq-item button {
-    min-height: 70px;
-    padding: 0 18px 0 62px;
-    font-size: 14px;
+    position: relative;
+
+    min-height: 92px;
+
+    padding: 18px 62px 18px 72px;
+
+    font-size: 15px;
+    line-height: 1.35;
+
+    text-align: left;
   }
 
   .faq-item button::before {
-    left: 18px;
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
+    left: 22px;
+
+    width: 36px;
+    height: 36px;
+
+    font-size: 16px;
+  }
+
+  .faq-item button span {
+    position: absolute;
+
+    right: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+  }
+
+  .faq-item.active button span {
+    transform: translateY(-50%) rotate(180deg);
   }
 
   .faq-content p {
-    padding: 0 18px 24px 62px;
+    padding: 0 22px 24px 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-item button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 92px;
+
+    padding: 20px 62px 20px 76px;
+
+    font-size: 15px;
+    line-height: 1.4;
+
+    text-align: left;
+  }
+
+  /* Ícone ? */
+
+  .faq-item button::before {
+    left: 22px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+  }
+
+  /* Texto */
+
+  .faq-item button strong {
+    display: block;
+
+    width: 100%;
+  }
+
+  /* Seta */
+
+  .faq-item button span {
+    position: absolute;
+
+    right: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .faq-content p {
+    padding: 0 22px 24px 76px;
   }
 }
 
@@ -1773,13 +1935,6 @@ FOOTER
   }
   .resultado-card {
     height: 330px;
-  }
-  .faq-item button {
-    padding: 21px 20px;
-    font-size: 15px;
-  }
-  .faq-content p {
-    padding: 0 20px 24px;
   }
   .cta {
     margin: 70px auto;
