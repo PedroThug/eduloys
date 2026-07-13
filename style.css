@@ -560,7 +560,6 @@ section {
 }
 .consultoria h2,
 .processo h2,
-.planos h2,
 .faq h2 {
   text-align: center;
   font-size: clamp(32px, 4vw, 44px);
@@ -1009,81 +1008,6 @@ RESULTADOS — CORREÇÃO DE ALTURA E ESPAÇAMENTO
   }
 }
 
-.planos {
-  padding: 90px 0 110px;
-  background:
-    radial-gradient(circle at top, rgba(200, 169, 106, 0.08), transparent 38%),
-    var(--bg);
-}
-.planos h2 {
-  margin-bottom: 30px;
-}
-
-.planos-grid {
-  width: min(var(--container), 92%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.plano {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 500px;
-  padding: 40px 30px;
-  border: 1px solid var(--border);
-  border-radius: 26px;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.015)
-  );
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-.plano:hover {
-  transform: translateY(-10px);
-  border-color: var(--gold);
-  box-shadow: var(--shadow);
-}
-.plano h3 {
-  margin-bottom: 35px;
-  text-align: center;
-  font-size: 23px;
-}
-.plano ul {
-  flex: 1;
-}
-.plano li {
-  margin-bottom: 18px;
-  color: var(--text);
-  font-size: 15px;
-  line-height: 1.7;
-}
-.plano .disabled {
-  opacity: 0.35;
-}
-.btn-plano {
-  display: block;
-  padding: 17px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
-  color: #111;
-  text-align: center;
-  font-weight: 900;
-  letter-spacing: 0.8px;
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-}
-.btn-plano:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-gold);
-}
 .destaque {
   border: 2px solid var(--gold);
   background: linear-gradient(180deg, rgba(200, 169, 106, 0.18), #181818);
@@ -1109,6 +1033,175 @@ RESULTADOS — CORREÇÃO DE ALTURA E ESPAÇAMENTO
   font-weight: 900;
   letter-spacing: 0.6px;
   white-space: nowrap;
+}
+
+.planos-grid {
+  width: min(980px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.plano {
+  position: relative;
+
+  min-height: 390px;
+  padding: 42px 30px 34px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid var(--border);
+  border-radius: 26px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.plano:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.42),
+    0 0 28px rgba(200, 169, 106, 0.08);
+}
+
+.plano h3 {
+  margin-bottom: 48px;
+
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* ÁREA DO DESCONTO */
+
+.plano-desconto {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.plano-desconto strong {
+  display: block;
+
+  color: var(--gold-light);
+
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.plano-desconto span {
+  margin-top: 10px;
+
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.plano-sem-desconto span {
+  color: var(--text-soft);
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+/* DESTAQUE */
+
+.destaque {
+  border: 2px solid var(--gold);
+
+  background: linear-gradient(180deg, rgba(200, 169, 106, 0.18), #181818);
+}
+
+/* BOTÃO */
+
+.btn-plano {
+  width: 100%;
+
+  padding: 17px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+
+  color: #111;
+
+  text-align: center;
+
+  font-weight: 900;
+  letter-spacing: 0.6px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-plano:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(200, 169, 106, 0.32);
+}
+
+/* BATIMENTO DO DESCONTO */
+
+.desconto-pulse {
+  animation: discountHeartbeat 2.2s infinite;
+}
+
+@keyframes discountHeartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  12% {
+    transform: scale(1.08);
+  }
+
+  24% {
+    transform: scale(1);
+  }
+
+  36% {
+    transform: scale(1.05);
+  }
+
+  48% {
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+  .planos-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .plano {
+    min-height: 340px;
+  }
 }
 
 /* =========================
@@ -1620,12 +1713,6 @@ FOOTER
   color: #fff;
 }
 
-@media (max-width: 1100px) {
-  .planos-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 950px) {
   .consultoria-grid,
   .processo-grid,
@@ -1686,15 +1773,6 @@ FOOTER
   }
   .resultado-card {
     height: 330px;
-  }
-  .planos {
-    padding: 80px 0;
-  }
-  .planos-grid {
-    grid-template-columns: 1fr;
-  }
-  .plano {
-    min-height: auto;
   }
   .faq-item button {
     padding: 21px 20px;
