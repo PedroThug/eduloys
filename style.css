@@ -442,7 +442,7 @@ RESPONSIVO HERO
   }
 
   .hero-text {
-    text-align: center;
+    text-align: left;
   }
 
   .hero-text h1 {
@@ -470,7 +470,7 @@ RESPONSIVO HERO
     width: 100%;
     max-width: 340px;
 
-    margin: 0 auto;
+    margin: 40px auto 0;
 
     justify-content: center;
     align-items: center;
