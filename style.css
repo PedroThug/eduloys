@@ -642,6 +642,7 @@ section {
 .consultoria h2 {
   margin-bottom: 62px;
 }
+
 .consultoria-grid {
   width: min(var(--container), 92%);
   margin: 0 auto;
@@ -1969,7 +1970,13 @@ FOOTER
 
   .sobre-text h2,
   .sobre .tag {
+    display: block;
+
+    width: 100%;
+
     text-align: center;
+
+    margin-bottom: 18px;
   }
   .accordion button {
     min-height: 68px;
