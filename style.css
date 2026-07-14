@@ -456,12 +456,11 @@ RESPONSIVO HERO
   }
 
   .hero-text p {
-    max-width: 100%;
-
-    margin: 0 auto 34px;
-
-    font-size: 16px;
-    line-height: 1.7;
+    text-align: justify;
+    text-align-last: left;
+    word-spacing: -0.5px;
+    letter-spacing: 0.15px;
+    line-height: 1.8;
   }
 
   .hero-text .btn {
