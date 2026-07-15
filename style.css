@@ -1970,12 +1970,8 @@ FOOTER
 
   .sobre-text h2 {
     display: block;
-
     width: 100%;
-
     text-align: center;
-
-    margin-bottom: 18px;
   }
   .accordion button {
     min-height: 68px;
