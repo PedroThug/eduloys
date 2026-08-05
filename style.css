@@ -191,9 +191,9 @@ HERO
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 58% 42%;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
 }
 
 .hero-text {
@@ -203,23 +203,25 @@ HERO
 }
 
 .hero-text h1 {
-  width: max-content;
-  max-width: none;
+  width: 100%;
+  max-width: 760px;
 
   margin-bottom: 28px;
 
   color: #fff;
 
-  font-size: clamp(50px, 4.35vw, 68px);
+  font-size: clamp(50px, 4.1vw, 66px);
   font-weight: 900;
 
-  line-height: 1.03;
+  line-height: 1.02;
   letter-spacing: -2px;
+
+  text-wrap: balance;
 }
 
 .hero-text h1 span {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hero-text p {
@@ -456,7 +458,7 @@ RESPONSIVO HERO
   }
 
   .hero-text p {
-    text-align: justify;
+    text-align: left;
     text-align-last: left;
     word-spacing: -0.5px;
     letter-spacing: 0.15px;
