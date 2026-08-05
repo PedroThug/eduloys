@@ -1217,25 +1217,9 @@ RESULTADOS — CORREÇÃO DE ALTURA E ESPAÇAMENTO
 
   color: var(--gold-light);
 
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 900;
   line-height: 1;
-}
-
-.plano-desconto span {
-  margin-top: 10px;
-
-  color: var(--gold);
-  font-size: 14px;
-  font-weight: 900;
-
-  letter-spacing: 2px;
-}
-
-.plano-sem-desconto span {
-  color: var(--text-soft);
-  font-size: 18px;
-  letter-spacing: 0;
 }
 
 /* DESTAQUE */
