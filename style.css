@@ -645,6 +645,24 @@ section {
   margin-bottom: 62px;
 }
 
+.consultoria-subtitle {
+  max-width: 760px;
+
+  margin: 22px auto 60px;
+
+  color: var(--text);
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  text-align: justify;
+}
+
+.consultoria-subtitle strong {
+  color: #c8a96a;
+  font-weight: 800;
+}
+
 .consultoria-grid {
   width: min(var(--container), 92%);
   margin: 0 auto;
@@ -658,6 +676,21 @@ section {
   flex-direction: column;
   gap: 18px;
 }
+
+@media (max-width: 768px) {
+  .consultoria-subtitle {
+    max-width: 100%;
+
+    margin: 18px auto 42px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    text-align: left;
+  }
+}
+
 .accordion {
   overflow: hidden;
   border: 1px solid var(--border);
